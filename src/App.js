@@ -1,3 +1,4 @@
+import ProcessorSection from "./sections/ProcessorSection";
 import DesignSection from "./sections/DesignSection";
 import DisplaySection from "./sections/DisplaySection";
 import HeroSection from "./sections/HeroSection";
@@ -16,6 +17,7 @@ function App() {
 		{/* <PhoneModel /> */}
 		<DesignSection />
 		<DisplaySection />
+		<ProcessorSection />
 	</>
   );
 }
