@@ -5,6 +5,7 @@ import HeroSection from "./sections/HeroSection";
 // import PhoneModel from "./sections/PhoneModel";
 import Quote from "./sections/Quote";
 import { GlobalStyle } from "./styles/GlobalStyle";
+import BatterySection from "./sections/BatterySection";
 
 
 
@@ -18,6 +19,7 @@ function App() {
 		<DesignSection />
 		<DisplaySection />
 		<ProcessorSection />
+		<BatterySection />
 	</>
   );
 }
