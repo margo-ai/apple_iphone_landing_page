@@ -14,13 +14,14 @@ import { useThree } from '@react-three/fiber';
 export default function Model(props) {
 
 
-  const { nodes, materials } = useGLTF('/scene.gltf')
+  const { nodes, materials } = useGLTF('/scene.gltf');
 
   let camera = useThree(state => state.camera);
   let scene = useThree(state => state.scene);
 
   useLayoutEffect(() => {
 	camera.position.set(0, 2, 6);
+	materials.Body.color.set("9BB5CE");
 
 	let t1 = gsap.timeline({
 		scrollTrigger: {
@@ -29,7 +30,7 @@ export default function Model(props) {
 			endTrigger: "#battery",
 			end: "top top",
 			scrub: true,
-			markers: true
+			// markers: true
 		}
 	});
 
