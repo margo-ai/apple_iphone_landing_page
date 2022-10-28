@@ -7,6 +7,7 @@ import Quote from "./sections/Quote";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import BatterySection from "./sections/BatterySection";
 import ColorSection from "./sections/ColorSection";
+import CameraSection from "./sections/CameraSection";
 
 
 
@@ -22,6 +23,7 @@ function App() {
 		<ProcessorSection />
 		<BatterySection />
 		<ColorSection />
+		<CameraSection />
 	</>
   );
 }
