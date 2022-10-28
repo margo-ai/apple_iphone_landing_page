@@ -9,7 +9,6 @@ title: Apple iPhone 13 Pro Max
 import React, { useRef, useLayoutEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useThree } from '@react-three/fiber';
 
 export default function Model(props) {
@@ -18,20 +17,33 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/scene.gltf')
 
   let camera = useThree(state => state.camera);
+  let scene = useThree(state => state.scene);
 
   useLayoutEffect(() => {
+	camera.position.set(0, 2, 6);
 
 	let t1 = gsap.timeline({
 		scrollTrigger: {
 			trigger: "#model",
-			start: "top top",
-			end: "bottom+=500 bottom",
+			start: "top+=200 top",
+			endTrigger: "#battery",
+			end: "top top",
+			scrub: true,
 			markers: true
 		}
 	});
 
 	t1.fromTo(camera.position, {y: 2}, {y: 0})
-	//   .fromTo(camera.position, {x: 1}, {x: 0})	
+	  .to(scene.rotation, {y: 0.8})
+	  .to(scene.rotation, {y: 3})
+	  .to(scene.rotation, {z: 1.58}, "key1")
+	  .to(camera.position, {z: 4}, "key1")
+	  .to(scene.rotation, {y: 0, z: 0}, "key2")
+	  .to(camera.position, {z: 6, x : -1}, "key2")
+	  .to(scene.rotation, {z: 0, y: 6.3}, "key3")
+	  .to(camera.position, {x: 0.8, y: 0}, "key3")
+
+
   
   }, [])
 

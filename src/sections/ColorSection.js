@@ -11,6 +11,7 @@ const Section = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 `;
 
 const Left = styled.div`
@@ -134,7 +135,7 @@ const ColorSection = () => {
         )
     
         return () => {
-        
+            
         };
     }, [])
     

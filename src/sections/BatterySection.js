@@ -71,7 +71,7 @@ const BatterySection = () => {
 	}, [])
 
 	return (
-	<Section>
+	<Section id="battery">
 		<Title>Go all day with single charge...</Title>
 		<Battery ref={battery}>
 			<li />
