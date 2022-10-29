@@ -10,7 +10,7 @@ import React, { useRef, useLayoutEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 
-export default function Model2(props) {
+export default function Model3(props) {
 
   const { nodes, materials } = useGLTF('/scene.gltf');
 

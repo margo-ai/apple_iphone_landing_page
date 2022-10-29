@@ -106,8 +106,7 @@ const CameraSection = () => {
                             trigger: el,
                             start: "top top",
                             end: "bottom bottom",
-                            scrub: true,
-                            markers: true
+                            scrub: true
                         },
                         x: 100,
                         opacity: 0
@@ -126,17 +125,17 @@ const CameraSection = () => {
         };
     }, [])
 
-  return (
-    <Section ref={sectionRef}>
-        <V1 ref={videoRef1} src={v1} type="video/mp4" autoPlay muted loop />
-        <V2 ref={videoRef2} src={v2} type="video/mp4" autoPlay muted loop />
-        <TitleContainer ref={titleRef}>
-            <Title>Ready.</Title>
-            <Title>Steady.</Title>
-            <Title>Action.</Title>
-        </TitleContainer>
-    </Section>
-  )
+    return (
+        <Section ref={sectionRef}>
+            <V1 ref={videoRef1} src={v1} type="video/mp4" autoPlay muted loop />
+            <V2 ref={videoRef2} src={v2} type="video/mp4" autoPlay muted loop />
+            <TitleContainer ref={titleRef}>
+                <Title>Ready.</Title>
+                <Title>Steady.</Title>
+                <Title>Action.</Title>
+            </TitleContainer>
+        </Section>
+    )
 };
 
 export default CameraSection;

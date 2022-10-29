@@ -8,6 +8,7 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import BatterySection from "./sections/BatterySection";
 import ColorSection from "./sections/ColorSection";
 import CameraSection from "./sections/CameraSection";
+import PricingSection from "./sections/PricingSection";
 
 
 
@@ -24,6 +25,7 @@ function App() {
 		<BatterySection />
 		<ColorSection />
 		<CameraSection />
+		<PricingSection />
 	</>
   );
 }
