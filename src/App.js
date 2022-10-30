@@ -9,6 +9,7 @@ import BatterySection from "./sections/BatterySection";
 import ColorSection from "./sections/ColorSection";
 import CameraSection from "./sections/CameraSection";
 import PricingSection from "./sections/PricingSection";
+import { ColorContextProvider } from "./context/ColorContext";
 
 
 
@@ -23,9 +24,11 @@ function App() {
 		<DisplaySection />
 		<ProcessorSection />
 		<BatterySection />
-		<ColorSection />
-		<CameraSection />
-		<PricingSection />
+		<ColorContextProvider>
+			<ColorSection />
+			<CameraSection />
+			<PricingSection />
+		</ColorContextProvider>
 	</>
   );
 }
