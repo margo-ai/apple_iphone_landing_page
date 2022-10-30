@@ -17,9 +17,13 @@ export default function Model3(props) {
   let camera = useThree(state => state.camera);  
 
   useLayoutEffect(() => {
-	camera.position.set(-0.1, 0.4, 5);
-	materials.Body.color.set("9BB5CE");
-
+    camera.position.set(-0.1, 0.4, 5);
+    materials.Body.color.set("9BB5CE");
+  
+    if (window.matchMedia("(max-width: 48em)").matches) {
+		camera.fov = 18;
+		camera.updateProjectionMatrix();
+    }
 	
   
   }, []);
