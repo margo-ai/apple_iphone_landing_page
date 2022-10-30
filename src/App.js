@@ -18,11 +18,11 @@ function App() {
 	<>
 		<GlobalStyle />
 		<Quote />
-		<HeroSection />
+		{/* <HeroSection /> */}
 		{/* <PhoneModel /> */}
-		{/* <DesignSection />
+		{/* <DesignSection /> */}
 		<DisplaySection />
-		<ProcessorSection />
+		{/* <ProcessorSection />
 		<BatterySection />
 		<ColorContextProvider>
 			<ColorSection />
